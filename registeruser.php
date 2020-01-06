@@ -36,6 +36,8 @@
     } 
  }
 
+
+ 
  $register=new Register();
  
     if(isset($_POST['username'],$_POST['password'])){
