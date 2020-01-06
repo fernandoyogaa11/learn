@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CRUD Operation on JSON File using PHP</title>
+	<title>lihat soal</title>
 </head>
 <form>
          <input type="button" onclick="window.location.href = 'menu.html';" value="MENU"/>
