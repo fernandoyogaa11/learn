@@ -1,0 +1,116 @@
+
+body{
+	font-family: sans-serif;
+	background: #d5f0f3;
+}
+
+ 
+h1
+{
+	font-family: Adobe Gothic Std B;
+	font-size: 35px;
+	height: 70px;
+	text-align: center;
+	/*ketebalan font*/
+	font-weight: 300;
+
+}
+
+h2
+{
+	font-style: italic;
+} 
+.tulisan_login{
+	text-align: center;
+	/*membuat semua huruf menjadi kapital*/
+	text-transform: uppercase;
+}
+ 
+.kotak_login{
+	width: 350px;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+}
+ 
+label{
+	font-size: 11pt;
+}
+ 
+.form_login{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+ 
+.tombol_login{
+	text-align: center;
+	float: left;
+	background: #46de4b;
+	color: white;
+	font-size: 11pt;
+	width: 150px;
+	border: none;
+	border-radius: 3px;
+	padding: 5px 10px;
+}
+.tombol_regis{
+	text-align: center;
+	float: center;
+	background: #46de4b;
+	color: white;
+	font-size: 11pt;
+	width: 150px;
+	border: none;
+	border-radius: 3px;
+	padding: 5px 10px;
+}
+ 
+.link{
+	color: #232323;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+.kika h2
+{
+	font-size: 30px;
+	font-family: sans-serif;
+	text-align: center;	
+	width: 300px;
+	background-color: green;
+}
+.menu{
+	background-color: green;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;	
+}
+.head{
+	width: 100%;
+	height: 50px;
+	background-color: pink;
+
+}
+.form_soal{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 500px;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+.nando
+{
+	font-size: 40px;
+	font-style: italic;
+	text-align: left;
+}
