@@ -87,7 +87,7 @@ $(document).ready(function(){
 							setInterval(function(){
 								window.location.href = 'index.php';
 							},1500);
-
+ 
 							
 
 						}else{
