@@ -15,26 +15,25 @@
 		<th>password</th>
 	</thead>
 	<tbody>
-		<?php
-			$data = file_get_contents('user.json');
-			$data = json_decode($data);
-			$index = 0;
-			foreach($data as $row){
-				echo "
-					<tr>
-						<td>".$row->id."</td>
-						<td>".$row->username."</td>
-						<td>".$row->password."</td>
-						<td>
-							<a href='update_user.php'>Edit</a>
-							<a href='hapus_user.php'>Delete</a>
-						</td>
-					</tr>
-				";
- 
-				$index++;
-			}
+	<?php 
+		include 'koneksi.php';
+		$no = 1;
+		$data = mysqli_query($koneksi,"select * from user");
+		while($d = mysqli_fetch_array($data)){
+			?>
+			<tr>
+				<td><?php echo $d['id']; ?></td>
+				<td><?php echo $d['username']; ?></td>
+				<td><?php echo $d['password']; ?></td>
+				<td>
+					<a href="update_user.php?id=<?php echo $d['id']; ?>">EDIT</a>
+					<a href="hapus_user.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+				</td>
+			</tr>
+			<?php 
+		}
 		?>
+	</tbody>
 	</tbody>
 </table>
 </body>

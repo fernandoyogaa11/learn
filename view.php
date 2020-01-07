@@ -21,31 +21,29 @@
 		<th>AKTIF</th>
 	</thead>
 	<tbody>
-		<?php
-			$data = file_get_contents('soal.json');
-			$data = json_decode($data);
-			$index = 0;
-			foreach($data as $row){
-				echo "
-					<tr>
-						<td>".$row->id."</td>
-						<td>".$row->soal."</td>
-						<td>".$row->a."</td>
-						<td>".$row->b."</td>
-						<td>".$row->c."</td>
-						<td>".$row->d."</td>
-						<td>".$row->kunci."</td>
-						<td>".$row->tanggal."</td>
-						<td>".$row->kunci."</td>
-						<td>
-						<a href='update.php '>Update</a>
-						<a href='delete.php?index=".$index."'>Delete</a>
-						</td>
-					</tr>
-				";
- 
-				$index++;
-			}
+	<?php 
+		include 'koneksi.php';
+		$no = 1;
+		$data = mysqli_query($koneksi,"select * from tbl_soal");
+		while($d = mysqli_fetch_array($data)){
+			?>
+			<tr>
+				<td><?php echo $d['id']; ?></td>
+				<td><?php echo $d['soal']; ?></td>
+				<td><?php echo $d['a']; ?></td>
+				<td><?php echo $d['b']; ?></td>
+				<td><?php echo $d['c']; ?></td>
+				<td><?php echo $d['d']; ?></td>
+				<td><?php echo $d['kunci']; ?></td>
+				<td><?php echo $d['tanggal']; ?></td>
+				<td><?php echo $d['aktif']; ?></td>
+				<td>
+					<a href="edit.php?id=<?php echo $d['id']; ?>">EDIT</a>
+					<a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+				</td>
+			</tr>
+			<?php 
+		}
 		?>
 	</tbody>
 </table>
