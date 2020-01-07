@@ -80,21 +80,19 @@ $(document).ready(function(){
                     success: function(pesan){
 
 						if(pesan.status == 200){
-							swal({
-								icon: 'success',
-								title: pesan.message,
-							});	
+							Swal.fire({
+  						icon: 'success',
+  						title: pesan.message,
+						})
 							setInterval(function(){
 								window.location.href = 'index.php';
-							},1500);
+							},2000);
  
-							
-
 						}else{
-							swal({
-								icon: 'error',
-								title: pesan.message,
-							});	
+							Swal.fire({
+  						icon: 'error',
+  						title: pesan.message,
+						})
 						}
 						
                     } 
@@ -103,6 +101,7 @@ $(document).ready(function(){
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
